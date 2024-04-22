@@ -20,7 +20,7 @@ public:
 	void PrintItemDescription();
 private:
 	string name;
-	string itemDescription
+	string itemDescription;
 	double price;
 	int quantity;
 };
