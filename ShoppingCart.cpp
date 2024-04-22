@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-ShoppingCart::ShoppingCart() : customerName("none"), currentData("January 1, 2016") {}
+ShoppingCart::ShoppingCart() : customerName("none"), currentDate("January 1, 2016") {}
 
 ShoppingCart::ShoppingCart(string name, string data) : customerName(name), currentDate(date) {}
 
