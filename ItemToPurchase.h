@@ -5,7 +5,7 @@ using namespace std;
 
 class ItemToPurchase {
 public:
-	ItemToPurchase(string n = "", string d = "", double p = 0, int q = 0);
+	ItemToPurchase(string n = "none", string d = "none", double p = 0, int q = 0);
 
 	void SetName(string n);
 	void SetDescription(string d);
