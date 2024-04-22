@@ -12,7 +12,7 @@ ItemToPurchase::ItemToPurchase(string n, string d, double p, int q) {
 void ItemToPurchase::SetName(string n) {
 	name = n;
 }
-void ItemToPurchase::SetDescription(string n) {
+void ItemToPurchase::SetDescription(string d) {
 	itemDescription = d;
 }
 void ItemToPurchase::SetPrice(double p) {
