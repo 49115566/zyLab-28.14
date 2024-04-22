@@ -1,6 +1,7 @@
 28.14 LAB*: Program: Online shopping cart (Part 2)
 This program extends the earlier "Online shopping cart (Part 1)" program. (Consider first saving your earlier program).
 
+------------------------------------------------------------------------------------------------------------------------------
 Step 1: Extend the ItemToPurchase class per the following specifications:
 -Parameterized constructor to assign item name, item description, item price, and item quantity (default values of 0). (1 pt)
 -Public member functions
@@ -16,6 +17,7 @@ Bottled Water 10 @ $1 = $10
 Ex. of PrintItemDescription() output:
 Bottled Water: Deer Park, 12 oz.
 
+------------------------------------------------------------------------------------------------------------------------------
 Step 2: Build three new files:
 -ShoppingCart.h - Class declaration
 -ShoppingCart.cpp - Class definition
@@ -68,6 +70,7 @@ Nike Romaleos: Volt color, Weightlifting shoes
 Chocolate Chips: Semi-sweet
 Powerbeats 2 Headphones: Bluetooth headphones
 
+------------------------------------------------------------------------------------------------------------------------------
 Step 3: In main(), prompt the user for a customer's name and today's date. Output the name and date. Create an object of type ShoppingCart. (1 pt)
 Ex:
 Enter customer's name:
@@ -77,6 +80,8 @@ February 1, 2016
 
 Customer name: John Doe
 Today's date: February 1, 2016
+
+------------------------------------------------------------------------------------------------------------------------------
 Step 4: Implement the PrintMenu() function
 -PrintMenu()
  -Prints the following menu of options to manipulate the shopping cart:
@@ -91,6 +96,7 @@ Step 4: Implement the PrintMenu() function
 -ExecuteMenu()
  -Takes 2 parameters: a character representing the user's choice and a shopping cart. Performs the menu options described below in step 5, according to the user's choice. (1 pt)
 
+------------------------------------------------------------------------------------------------------------------------------
 Step 5: Implement the menu options
  -Step 5a: In main(), call PrintMenu() and prompt for the user's choice of menu options. Each option is represented by a single character.
 Hint: Implement Quit before implementing other options.
