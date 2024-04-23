@@ -21,22 +21,22 @@ void ItemToPurchase::SetPrice(double p) {
 void ItemToPurchase::SetQuantity(int q) {
 	quantity = q;
 }
-string ItemToPurchase::GetName() {
+string ItemToPurchase::GetName() const {
 	return name;
 }
-string ItemToPurchase::GetDescription() {
+string ItemToPurchase::GetDescription() const {
 	return itemDescription;
 }
-double ItemToPurchase::GetPrice() {
+double ItemToPurchase::GetPrice() const {
 	return price;
 }
-int ItemToPurchase::GetQuantity() {
+int ItemToPurchase::GetQuantity() const {
 	return quantity;
 }
 
-void ItemToPurchase::PrintItemCost() {
+void ItemToPurchase::PrintItemCost() const {
 	cout << name << ' ' << quantity << " @ $" << price << " = $" << quantity*price << endl;
 }
-void ItemToPurchase::PrintItemDescription() {
+void ItemToPurchase::PrintItemDescription() const {
 	cout << name << ": " << itemDescription << endl;
 }

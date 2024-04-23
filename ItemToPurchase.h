@@ -11,13 +11,13 @@ public:
 	void SetDescription(string d);
 	void SetPrice(double p);
 	void SetQuantity(int q);
-	string GetName();
-	string GetDescription();
-	double GetPrice();
-	int GetQuantity();
+	string GetName() const;
+	string GetDescription() const;
+	double GetPrice() const;
+	int GetQuantity() const;
 
-	void PrintItemCost();
-	void PrintItemDescription();
+	void PrintItemCost() const;
+	void PrintItemDescription() const;
 private:
 	string name;
 	string itemDescription;
