@@ -68,7 +68,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
         case 'o':
             cout << "OUTPUT SHOPPING CART" << endl;
             cout << theCart.GetCustomerName() << "'s Shopping Cart - " << theCart.GetDate() << endl;
-            cout << "Number of Items: " << theCart.GetNumItems() << endl << endl;
+            cout << "Number of Items: " << theCart.GetNumItemsInCart() << endl << endl;
             theCart.PrintTotal();
             break;
         case 'q':
@@ -82,7 +82,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
 int main() {
    string customerName;
    string todayDate;
-
+    
    cout << "Enter customer's name: " << endl;
    getline(cin, customerName);
 
@@ -93,6 +93,12 @@ int main() {
    cout << "Today's date: " << todayDate << endl;
 
    ShoppingCart theCart;
-   
+
+    char choices = 0;
+    while(choices != 'q') {
+        PrintMenu();
+        cin >> choices;
+        ExecuteMenu(choices, theCart);
+    }
    return 0;
 }
