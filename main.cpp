@@ -12,7 +12,6 @@ void PrintMenu() {
     cout << "i - Output items' descriptions" << endl;
     cout << "o - Output shopping cart" << endl;
     cout << "q - Quit" << endl;
-    cout << "Choose an option:" << endl;
 }
 
 void ExecuteMenu(char option, ShoppingCart& theCart) {
@@ -97,6 +96,7 @@ int main() {
     char choices = 0;
     while (choices != 'q') {
         PrintMenu();
+        cout << "Choose an option:" << endl;
         cin >> choices;
         ExecuteMenu(choices, theCart);
     }
