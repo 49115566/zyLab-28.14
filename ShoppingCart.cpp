@@ -26,6 +26,17 @@ void ShoppingCart::RemoveItem(const string& itemName) {
             }
         }
     }
+
+void ShoppingCart::ModifyItem(const ItemToPurchase& item) {
+    int i;
+    for (i = 0; i < cartItems.size() && cartItems.at(i).GetName() != item.GetName(); i++);
+    if (i != cartItems.size()) {
+        if(item.GetDescription() != "none") cartItems.at(i).SetDescription(item.GetDescription());
+        if(item.GetPrice() != 0.0) cartItems.at(i).SetPrice(item.GetPrice());
+        if(item.GetQuantity() != 0) cartItems.at(i).SetQuantity(item.GetQuantity());
+    }
+}
+
         int ShoppingCart::GetNumItemsInCart() const {
             int totalItems = 0;
             for (ItemToPurchase item: cartItems) {
