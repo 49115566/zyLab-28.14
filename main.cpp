@@ -16,19 +16,26 @@ void PrintMenu() {
 }
 
 void ExecuteMenu(char option, ShoppingCart& theCart) {
+    string temp;
+    double prices;
+    int temp2;
     switch (option) {
         case 'a': {
             cout << "ADD ITEM TO CART" << endl;
             ItemToPurchase newItem;
             cin.ignore(); // Clear input buffer
             cout << "Enter the item name:" << endl;
-            getline(cin, newItem.GetName());
+            getline(cin, temp);
+            newItem.SetName(temp);
             cout << "Enter the item description:" << endl;
-            getline(cin, newItem.GetDescription());
+            getline(cin, temp);
+            newItem.SetDescription(temp);
             cout << "Enter the item price:" << endl;
-            cin >> newItem.GetPrice();
+            cin >> prices;
+            newItem.SetPrice(prices);
             cout << "Enter the item quantity:" << endl;
-            cin >> newItem.GetQuantity();
+            cin >> temp2;
+            newItem.SetQuantity(temp2);
             theCart.AddItem(newItem);
             break;
         }
@@ -50,7 +57,8 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             getline(cin, itemName);
             cout << "Enter the new quantity:" << endl;
             cin >> newQuantity;
-            theCart.ModifyItem(itemName, newQuantity);
+            ItemToPurchase items(itemName, "none", 0.0, newQuantity);
+            theCart.ModifyItem(items);
             break;
         }
         case 'i':
