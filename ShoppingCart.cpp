@@ -64,8 +64,8 @@ void ShoppingCart::PrintTotal() const {
             ItemToPurchase item : cartItems) {
             item.PrintItemCost();
         }
-        cout << endl << "Total $" << GetCostOfCart() << endl;
     }
+    cout << endl << "Total $" << GetCostOfCart() << endl;
 }
 void ShoppingCart::PrintDescriptions() const {
     cout << customerName << "'s Shopping Cart -" << currentDate << endl;
