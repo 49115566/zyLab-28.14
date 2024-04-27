@@ -65,16 +65,11 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
         theCart.PrintDescriptions();
         break;
     case 'o':
-        cout << "OUTPUT SHOPPING CART" << endl;
-        cout << theCart.GetCustomerName() << "'s Shopping Cart - " << theCart.GetDate() << endl;
-        cout << "Number of Items: " << theCart.GetNumItemsInCart() << endl << endl;
         theCart.PrintTotal();
         break;
     case 'q':
-        cout << "Exiting program..." << endl;
+        //cout << "Exiting program..." << endl;
         break;
-    default:
-        cout << "Invalid option. Please choose again." << endl;
     }
 }
 
@@ -82,7 +77,7 @@ int main() {
     string customerName;
     string todayDate;
 
-    cout << "Enter customer's name: " << endl;
+    cout << "Enter customer's name:" << endl;
     getline(cin, customerName);
 
     cout << "Enter today's date:" << endl;
@@ -95,7 +90,11 @@ int main() {
 
     char choices = 0;
     while (choices != 'q') {
-        PrintMenu();
+        if (choices == 0 || choices == 'a' || choices == 'd' || choices == 'c' || choices == 'i' || choices == 'o' || choices == 'q') {
+            cout << endl;
+            PrintMenu();
+            cout << endl;
+        }
         cout << "Choose an option:" << endl;
         cin >> choices;
         ExecuteMenu(choices, theCart);
