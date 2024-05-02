@@ -1,3 +1,6 @@
+//Craig Truitt, Alex Gao, and Jordan Cox
+//https://github.com/49115566/zyLab-28.14/
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
